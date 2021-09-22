@@ -1,12 +1,12 @@
 import { useState } from 'react'
 function App() {
 
-  let newTime = new Date().toLocaleTimeString()
+  let newTime = new Date().toLocaleTimeString([], {hourCycle: "h12"})
 
   const [inTime, cTime] = useState(newTime)
 
   const updateTime = () => {
-    newTime = new Date().toLocaleTimeString()
+    newTime = new Date().toLocaleTimeString([], {hourCycle: "h12"})
     cTime(newTime)
   }
 
